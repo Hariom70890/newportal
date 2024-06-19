@@ -1,8 +1,7 @@
-// services/newsApi.js
 import axios from 'axios';
 
-const API_KEY = process.env.API_KEY;
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = 'https://newsapi.org/v2';
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const newsApi = {
   getArticles: async (params) => {

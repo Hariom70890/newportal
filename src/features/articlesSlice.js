@@ -1,4 +1,3 @@
-// features/articlesSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import newsApi from '../services/newsApi';
 

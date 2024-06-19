@@ -6,18 +6,18 @@ function SearchBar() {
   const dispatch = useDispatch();
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    dispatch(setSearchQueryy(searchQuery));
-  };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = ( e ) =>
+  {
+    e.preventDefault();
     setSearchQuery(e.target.value);
+    dispatch(setSearchQueryy(searchQuery));
+    
   };
 
   return (
     <div className="mb-4">
-      <form onSubmit={handleSearch} className="d-flex">
+      <form className="d-flex">
         <input
           type="text"
           className="form-control mr-2"
@@ -25,9 +25,6 @@ function SearchBar() {
           value={searchQuery}
           onChange={handleInputChange}
         />
-        <button type="submit" className="btn btn-primary">
-          Search
-        </button>
       </form>
     </div>
   );

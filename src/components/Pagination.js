@@ -1,9 +1,19 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { setPage } from '../features/articlesSlice';
 
-function Pagination({ currentPage, totalResults, pageSize }) {
+function Pagination({ currentPage, totalResults }) {
   const dispatch = useDispatch();
+  const searchQuery = useSelector((state) => state.articles.searchQuery);
+
+  // Calculate the dynamic page size to ensure at least 10 articles per page
+  const pageSize = useMemo(() => {
+    const minPageSize = 10;
+    const maxPageSize = 20;
+    const calculatedPageSize = Math.ceil(totalResults / Math.max(Math.ceil(totalResults / maxPageSize), 1));
+    return Math.max(calculatedPageSize, minPageSize);
+  }, [totalResults]);
+
   const totalPages = Math.ceil(totalResults / pageSize);
 
   const handlePageChange = (newPage) => {
@@ -31,6 +41,11 @@ function Pagination({ currentPage, totalResults, pageSize }) {
 
     return pageNumbers;
   };
+
+  // Don't render pagination if there is a search query and results are few
+  if (searchQuery && totalResults <= 2) {
+    return null;
+  }
 
   return (
     <nav>
