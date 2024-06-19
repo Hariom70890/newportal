@@ -1,70 +1,81 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React News Portal
 
-## Available Scripts
+The React News Portal is a responsive web application built with React that allows users to browse and read news articles from various categories. It fetches news data from the NewsAPI and provides features like category filtering, pagination, and search functionality.
+## Features
 
-In the project directory, you can run:
+- **Homepage** : Displays a list of news articles with titles, images, and summaries.
+- **Category Filtering** :  Users can filter articles by categories such as general, business, technology, and entertainment.
+- **Pagination** : Articles are paginated, allowing users to navigate through different pages.
+- **Search**: Users can search for articles by entering keywords in the search bar.
+- **Detailed Article View** : Clicking on an article summary navigates to a detailed view of the article, displaying the full content.
+- **Responsive Design** : The application is responsive and adapts to different screen sizes, ensuring a seamless experience on desktop and mobile devices.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ React, TailwindCSS, Redux Toolkit (for state management), Axios (for API calls), Bootstrap (for UI components and styling), React Router (for routing and navigation)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install my-project with npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  git clone https://github.com/Hariom70890/newportal.git
 
-### `npm run eject`
+  npm install 
+  
+```
+Obtain an API key from NewsAPI and replace 'YOUR_API_KEY' in the services/newsApi.js file with your actual API key.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+// services/newsApi.js
+const API_KEY = 'YOUR_API_KEY';
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the development server:
+```
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage/Examples
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. On the homepage, you'll see a list of news articles with their titles, images, and summaries.
+2. Use the category filter buttons to filter articles by different categories.
+3. Navigate through different pages of articles using the pagination controls at the bottom of the page.
+4. Enter keywords in the search bar to search for specific articles.
+5. Click on an article summary to navigate to the detailed article view, displaying the full content of the article.
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are always welcome!
 
-### Code Splitting
+If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+- [NewsAPI for providing the news data API](https://newsapi.org/v2)
+- React and the React community for the amazing library and resources.
+- Redux Toolkit for simplifying state management in React applications.
+- Axios for easy-to-use HTTP client.
+- Bootstrap for responsive UI components and styling.
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To deploy this project run
 
-### Advanced Configuration
+```bash
+  npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Demo
+```
+https://newportal-rho.vercel.app
+ ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
