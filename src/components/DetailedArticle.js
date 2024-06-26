@@ -35,4 +35,4 @@ function DetailedArticleView() {
   );
 }
 
-export default DetailedArticleView;
+export default DetailedArticleView; 
